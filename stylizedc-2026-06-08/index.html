@@ -1,27 +1,1135 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8">
-
 <meta name="robots" content="noindex,nofollow">
-<title>StylizedC — креативы для QA</title>
+<title>StylizedC pack для Сергея · полный отчёт 2026-06-08</title>
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-       padding: 20px; background: #f7f7f8; color: #222; }
-h1 { margin: 0 0 12px 0; font-size: 22px; }
-.sub { color: #666; font-size: 13px; margin-bottom: 16px; }
-table { border-collapse: collapse; background: white; border: 1px solid #e2e2e6;
-        border-radius: 8px; overflow: hidden; width: 100%; }
-td, th { padding: 8px 12px; border-bottom: 1px solid #eee; vertical-align: middle;
-         font-size: 13px; }
-th { background: #fafafb; font-size: 11px; text-transform: uppercase;
-     color: #555; text-align: left; letter-spacing: 0.4px; }
-tr:last-child td { border-bottom: none; }
+* { box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+       margin:0;padding:24px;background:#f4f5f7;color:#222;line-height:1.5;}
+h1 { margin:0 0 8px 0; font-size:24px; }
+h2 { margin:32px 0 12px 0; font-size:19px; border-bottom:2px solid #e2e2e6; padding-bottom:4px;}
+h3 { margin:0 0 6px 0; font-size:15px; }
+.sub { color:#666; font-size:13px; margin-bottom:8px; }
+.section { background:white; border:1px solid #e2e2e6; border-radius:10px; padding:20px;
+           margin-bottom:18px; }
+.section.red { border-left:4px solid #a01d1d; background:#fff8f8; }
+.section.amber { border-left:4px solid #d68a00; background:#fffcf3; }
+.section.green { border-left:4px solid #166534; background:#f3fbf6; }
+.kpi-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-bottom:16px;}
+.kpi { background:white;border:1px solid #e2e2e6;border-radius:8px;padding:10px 14px;}
+.kpi .l { color:#666;font-size:11px;text-transform:uppercase;letter-spacing:0.5px; }
+.kpi .v { font-size:20px;font-weight:600;margin-top:4px; }
+.kpi .s { color:#888;font-size:11px;margin-top:2px; }
+.card { display:flex; gap:14px; background:white;border:1px solid #e2e2e6;border-radius:8px;
+         padding:14px; margin-bottom:10px; }
+.card-thumb { flex:0 0 110px; }
+.card-body { flex:1; min-width:0; }
+.card-head { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:4px;}
+.card-head h3 { flex:1; font-size:14px; }
+.card-meta { color:#888; font-size:11px; margin-bottom:8px; }
+.card-grid { display:grid; grid-template-columns:repeat(5,auto); gap:6px 18px; font-size:12px;}
+.card-grid > div { white-space:nowrap; }
+.lbl { color:#888; font-size:10px; text-transform:uppercase; letter-spacing:0.3px; }
+.hypothesis { margin-top:10px; padding:8px 12px; background:#f8f9fa; border-radius:4px;
+              font-size:12.5px; color:#333; border-left:3px solid #999; }
+.badge { display:inline-block; padding:1px 6px; border-radius:3px; background:#eef0f3;
+         color:#555; font-size:11px; font-weight:600; letter-spacing:0.2px;}
+table { width:100%; border-collapse:collapse; background:white; border:1px solid #e2e2e6;
+        border-radius:6px; overflow:hidden; font-size:13px; }
+th,td { padding:7px 10px; text-align:left; border-bottom:1px solid #eee; vertical-align:top; }
+th { background:#fafafb; font-weight:600; font-size:11px; text-transform:uppercase;
+     letter-spacing:0.3px; color:#555; }
+ul.flags { list-style:none; padding-left:0;}
+ul.flags li { padding:10px 12px; border-left:3px solid #a01d1d; background:#fff8f8;
+              margin-bottom:8px; border-radius:4px; font-size:13px; }
+ul.dwell li { padding:8px 12px; border-left:3px solid #d68a00; background:#fffcf3;
+              margin-bottom:6px; border-radius:4px; font-size:13px; list-style:none;}
+ul.dwell { padding-left:0; }
+ul.b2c { padding-left:0; list-style:none; }
+ul.b2c li { padding:8px 12px; border-left:3px solid #8b4309; background:#fff5e6;
+            margin-bottom:6px; border-radius:4px; font-size:13px;}
+code { background:#f4f4f6; padding:1px 5px; border-radius:3px; font-size:11.5px; }
+.action { background:#f0f7ff; border-left:3px solid #1e6db8; padding:10px 14px;
+          border-radius:4px; margin-bottom:8px; font-size:13.5px;}
+.action b { color:#1e6db8;}
 </style></head><body>
-<h1>StylizedC · 44 креативов · $1182.88 за 01.05 → 2026-06-08</h1>
-<div class="sub">Конверсий: 2 · Group в LinkedIn UI: StylizedC (ACTIVE, WEBSITE_CONVERSION) ·
-картинки в <code>creatives/</code> · клик по миниатюре → пост в LinkedIn ·
-полный отчёт с PAUSE/KEEP-рекомендациями: <a href="full_report_with_recommendations.html">full_report_with_recommendations.html</a></div>
-<table><thead><tr>
-<th>Image</th><th>Creative · Кампания · Status</th>
-<th style="text-align:right">Spend</th><th style="text-align:right">Impr</th>
-<th style="text-align:right">Clicks</th><th style="text-align:right">Conv</th>
-</tr></thead><tbody><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7456009539667156993/" target="_blank" rel="noopener"><img src="creatives/Stylized_Props_2__stylized_props_freelancers-vehicle.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_props_freelancers-vehicle</b><br><small style="color:#666">Stylized_Props_2 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$310.50</td><td style="text-align:right;font-variant-numeric:tabular-nums">4,185</td><td style="text-align:right">31</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7456011922732146688/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_freelancers-founder.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_freelancers-founder</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$264.74</td><td style="text-align:right;font-variant-numeric:tabular-nums">4,590</td><td style="text-align:right">38</td><td style="text-align:right">2</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7456011915874418688/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_10kreviews.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_10kreviews</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$100.90</td><td style="text-align:right;font-variant-numeric:tabular-nums">2,906</td><td style="text-align:right">20</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7456009561406234624/" target="_blank" rel="noopener"><img src="creatives/Stylized_Props_2__stylized_props_caretaker-robot.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_props_caretaker-robot</b><br><small style="color:#666">Stylized_Props_2 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$70.66</td><td style="text-align:right;font-variant-numeric:tabular-nums">1,674</td><td style="text-align:right">6</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7456009532742377473/" target="_blank" rel="noopener"><img src="creatives/Stylized_Props_2__stylized_props_premium-isometric.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_props_premium-isometric</b><br><small style="color:#666">Stylized_Props_2 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$64.32</td><td style="text-align:right;font-variant-numeric:tabular-nums">882</td><td style="text-align:right">4</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7459968046086897664/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character-Animation_3__stylized_chars-anim_001_want-to-create-top.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_chars-anim_001_want-to-create-top</b><br><small style="color:#666">Stylized_Character-Animation_3 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$64.17</td><td style="text-align:right;font-variant-numeric:tabular-nums">1,522</td><td style="text-align:right">8</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7456011903279095808/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_topchart-action.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_topchart-action</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$62.71</td><td style="text-align:right;font-variant-numeric:tabular-nums">1,888</td><td style="text-align:right">17</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7456011929095106560/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_2x-engagement.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_2x-engagement</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$44.72</td><td style="text-align:right;font-variant-numeric:tabular-nums">1,048</td><td style="text-align:right">12</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7459968342271868928/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character-Animation_3__stylized_chars-anim_002_wonder-who-made.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_chars-anim_002_wonder-who-made</b><br><small style="color:#666">Stylized_Character-Animation_3 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$34.82</td><td style="text-align:right;font-variant-numeric:tabular-nums">1,316</td><td style="text-align:right">4</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474986773757952/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_topchart-rpg.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_topchart-rpg</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$27.57</td><td style="text-align:right;font-variant-numeric:tabular-nums">129</td><td style="text-align:right">4</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7456011909759209472/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_75revenue-angel.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_75revenue-angel</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$25.52</td><td style="text-align:right;font-variant-numeric:tabular-nums">897</td><td style="text-align:right">14</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474843328557057/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_blueprince-action.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_blueprince-action</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$17.44</td><td style="text-align:right;font-variant-numeric:tabular-nums">386</td><td style="text-align:right">1</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475016725188608/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_topchart-strategy.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_topchart-strategy</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$15.21</td><td style="text-align:right;font-variant-numeric:tabular-nums">225</td><td style="text-align:right">1</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475247638306816/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_why-choose.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_why-choose</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$14.90</td><td style="text-align:right;font-variant-numeric:tabular-nums">197</td><td style="text-align:right">2</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7459968576653819904/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character-Animation_3__stylized_chars-anim_003_we-donot-just-model.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_chars-anim_003_we-donot-just-model</b><br><small style="color:#666">Stylized_Character-Animation_3 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$14.69</td><td style="text-align:right;font-variant-numeric:tabular-nums">1,503</td><td style="text-align:right">3</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474819857219584/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_obsessed-aaa.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_obsessed-aaa</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$12.17</td><td style="text-align:right;font-variant-numeric:tabular-nums">267</td><td style="text-align:right">3</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7459619223452061696/" target="_blank" rel="noopener"><img src="creatives/Stylized_Props_2__stylized_props_premium-grid.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_props_premium-grid</b><br><small style="color:#666">Stylized_Props_2 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$11.23</td><td style="text-align:right;font-variant-numeric:tabular-nums">232</td><td style="text-align:right">1</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475403523985409/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_launching.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_launching</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$11.10</td><td style="text-align:right;font-variant-numeric:tabular-nums">1,198</td><td style="text-align:right">3</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7456009546357125120/" target="_blank" rel="noopener"><img src="creatives/Stylized_Props_2__stylized_props_caretaker-props.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_props_caretaker-props</b><br><small style="color:#666">Stylized_Props_2 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$9.54</td><td style="text-align:right;font-variant-numeric:tabular-nums">1,335</td><td style="text-align:right">1</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474793072357376/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_investors.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_investors</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$3.39</td><td style="text-align:right;font-variant-numeric:tabular-nums">149</td><td style="text-align:right">1</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7456009553491615744/" target="_blank" rel="noopener"><img src="creatives/Stylized_Props_2__stylized_props_redmech-closeup.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_props_redmech-closeup</b><br><small style="color:#666">Stylized_Props_2 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$2.57</td><td style="text-align:right;font-variant-numeric:tabular-nums">933</td><td style="text-align:right">1</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475374331559936/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_aaa-comeback.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_aaa-comeback</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">60</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475219129835520/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_freelancers-warrior.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_freelancers-warrior</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">96</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474872634187776/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_blueprince-stylish.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_blueprince-stylish</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">42</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475276402962432/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_blueprince-10m.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_blueprince-10m</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">322</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7459619251717505025/" target="_blank" rel="noopener"><img src="creatives/Stylized_Props_2__stylized_props_outsource-mech.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_props_outsource-mech</b><br><small style="color:#666">Stylized_Props_2 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">347</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475338147287040/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_whytrustus.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_whytrustus</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">72</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475160506073089/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_funding-creatures.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_funding-creatures</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">76</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474955949842432/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_warrior.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_warrior</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">64</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7459619166862536704/" target="_blank" rel="noopener"><img src="creatives/Stylized_Props_2__stylized_props_upgrade-arcade.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_props_upgrade-arcade</b><br><small style="color:#666">Stylized_Props_2 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">231</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475046471098368/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_topchart-scifi.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_topchart-scifi</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">26</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7459619055608610816/" target="_blank" rel="noopener"><img src="creatives/Stylized_Props_2__stylized_props_team-overloaded.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_props_team-overloaded</b><br><small style="color:#666">Stylized_Props_2 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">102</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><span style="color:#aaa">—</span></td><td><b>templateforclaude</b><br><small style="color:#666">Stylized_Character_1 · PAUSED · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">0</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474765289259008/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_2mlnplayers.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_2mlnplayers</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">51</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475307348480000/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_users-revenue.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_users-revenue</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">134</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458481691238727680/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_producers-approve.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_producers-approve</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">33</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474927730565120/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_mage.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_mage</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">108</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7459619137493925889/" target="_blank" rel="noopener"><img src="creatives/Stylized_Props_2__stylized_props_premium-motorcycle.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_props_premium-motorcycle</b><br><small style="color:#666">Stylized_Props_2 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">131</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474900400267264/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_robot.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_robot</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">66</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475431936241664/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_aaa-giraffe.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_aaa-giraffe</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">63</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458481615044898816/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_funding-heads.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_funding-heads</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">21</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475188846903296/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_2x-sessions.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_2x-sessions</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">87</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7458481585307242497/" target="_blank" rel="noopener"><img src="creatives/Stylized_Character_1__stylized_characters_faces-remember.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_characters_faces-remember</b><br><small style="color:#666">Stylized_Character_1 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">40</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr><tr><td><a href="https://www.linkedin.com/feed/update/urn:li:share:7459619196654706691/" target="_blank" rel="noopener"><img src="creatives/Stylized_Props_2__stylized_props_break-pipeline.jpg" style="width:84px;height:84px;object-fit:cover;border-radius:4px;border:1px solid #e2e2e6"></a></td><td><b>stylized_props_break-pipeline</b><br><small style="color:#666">Stylized_Props_2 · ACTIVE · review=APPROVED</small></td><td style="text-align:right;font-variant-numeric:tabular-nums">$0.00</td><td style="text-align:right;font-variant-numeric:tabular-nums">264</td><td style="text-align:right">0</td><td style="text-align:right">0</td></tr></tbody></table>
+
+<h1>StylizedC pack для Сергея — полный отчёт</h1>
+<div class="sub">LinkedIn group <b>StylizedC</b> (ACTIVE, WEBSITE_CONVERSION) ·
+3 кампании: Stylized_Character_1, Stylized_Props_2, Stylized_Character-Animation_3 ·
+окно <b>2026-05-01 → 2026-06-08</b> (39 дней) · <a href="audience_targeting_and_delivery.md">аудитория &amp; доставка →</a>
+</div>
+
+<div class="kpi-grid">
+  <div class="kpi"><div class="l">Spend (LI)</div><div class="v">$1,182.88</div></div>
+  <div class="kpi"><div class="l">Impr · Clicks</div><div class="v">29,898 · 175</div>
+       <div class="s">CTR 0.59% · CPC $6.76</div></div>
+  <div class="kpi"><div class="l">Conv LI</div><div class="v">2</div>
+       <div class="s">externalWebsiteConv</div></div>
+  <div class="kpi"><div class="l">GA4 sess · eng</div><div class="v">344 · 91</div>
+       <div class="s">26% engaged</div></div>
+  <div class="kpi"><div class="l">GA4 conv</div><div class="v">5</div>
+       <div class="s">за то же окно</div></div>
+</div>
+
+<div class="section red">
+<h2>🚨 Red flags — что обязательно показать Сергею</h2>
+
+<h3>1. UTM-теги broken: 96% трафика приходит через имена DRAFT-кампаний, не активных</h3>
+<div class="sub">GA4 видит трафик с такими <code>utm_medium</code>:</div>
+<table>
+<thead><tr><th>utm_medium (как видит GA4)</th><th style="text-align:right">Sessions</th>
+<th style="text-align:right">Engaged</th><th style="text-align:right">Conv</th></tr></thead>
+<tbody><tr><td><b>Stylized_Character_4</b> ⚠ <span style=color:#a01d1d>не среди активных кампаний StylizedC (draft/archived)</span></td><td style="text-align:right">234</td><td style="text-align:right">67</td><td style="text-align:right">3</td></tr><tr><td><b>Stylized_Props_1</b> ⚠ <span style=color:#a01d1d>не среди активных кампаний StylizedC (draft/archived)</span></td><td style="text-align:right">91</td><td style="text-align:right">16</td><td style="text-align:right">1</td></tr><tr><td><b>Stylized_Character_1</b>  ✅ активна в LI UI</td><td style="text-align:right">9</td><td style="text-align:right">4</td><td style="text-align:right">0</td></tr><tr><td><b>Stylized_Character-Animation_3</b>  ✅ активна в LI UI</td><td style="text-align:right">7</td><td style="text-align:right">3</td><td style="text-align:right">0</td></tr><tr><td><b>Stylized_Props_2</b>  ✅ активна в LI UI</td><td style="text-align:right">3</td><td style="text-align:right">1</td><td style="text-align:right">1</td></tr></tbody></table>
+<div class="action" style="margin-top:10px">
+<b>Что значит:</b> 94% трафика StylizedC group в GA4 атрибутируется к
+<code>Stylized_Character_4</code> + <code>Stylized_Props_1</code> — это имена <b>DRAFT-кампаний из другой группы</b> (<code>Stylized</code>, PAUSED, LEAD_GENERATION).
+Имена активных кампаний StylizedC (<code>_1 / _2 / _Animation_3</code>) собирают только 6%.<br><br>
+<b>Корень:</b> при создании активных кампаний URLs креативов скопированы со старых DRAFT-templates с залоченными UTM-тегами.<br>
+<b>Фикс:</b> зайти в LinkedIn Campaign Manager → каждая активная кампания → URL parameters →
+поставить <code>utm_source=linkedin&amp;utm_medium=paid_social&amp;utm_campaign={{campaign.name}}</code>.
+Тогда attribution в GA4 + Coda + reports станет честным.
+</div>
+
+<h3>2. Smart-event drought — 0 form-submit / contact / hire / quote из 14 stylized-сессий в Clarity</h3>
+<div class="sub">Из 14 stylized-сессий ни одна не дошла до Hire Us / Get a Quote / Submit Form / Contact / Download на stylized-лендинге. Smart-event сработал только в 1 сессии (fa4oce), которая пришла с другой кампании (Casual_Characters_3) и докатилась до /contact/.</div>
+<div class="action">
+<b>Что значит:</b> LinkedIn-трафик НЕ конвертит на самих stylized-лендингах. Конверсии (всего 2 в LI API + 5 в GA4)
+происходят далеко не сразу — обычно после re-targeting или organic-возврата.<br>
+<b>Фикс:</b> добавить выраженный CTA-блок ближе к топу stylized-лендинга (сейчас он внизу страницы),
+или перенаправлять stylized-traffic на <code>/contact/</code> напрямую (там CTA-form работает — fa4oce session подтвердила).
+</div>
+
+<h3>3. Page-perf failures на /outsourcing/ads-3d-characters/</h3>
+<ul class="flags"><li><b>13fb6ao/p6npph</b> <span class="badge" style="color:#555;background:#eee">Stylized_Character_4</span> <span class="badge" style="color:#555;background:#eef">stylized_characters_freelancers-founder</span><br><span style="color:#a01d1d">🚩 30 blank-text clicks on 3 повторяющихся hash&#x27;ах на одной странице за 5 минут → rage/dead-click signature (юзер кликает на нерабочий элемент)</span><br><a href="https://clarity.microsoft.com/player/jj4yt67ln5/13fb6ao/p6npph" target="_blank" style="font-size:12px">▶ Watch replay</a></li><li><b>918k34/1ufh4f9</b> <span class="badge" style="color:#555;background:#eee">Stylized_Character_4</span> <span class="badge" style="color:#555;background:#eef">stylized_characters_freelancers-founder</span><br><span style="color:#a01d1d">🚩 pageLoadTime 38 секунд (worst page-load в когорте). На медленных каналах юзер не дождётся.</span><br><a href="https://clarity.microsoft.com/player/jj4yt67ln5/918k34/1ufh4f9" target="_blank" style="font-size:12px">▶ Watch replay</a></li><li><b>60yq2k/op1iud</b> <span class="badge" style="color:#555;background:#eee">Stylized_Character-Animation_3</span> <span class="badge" style="color:#555;background:#eef">stylized_chars-anim_003_we-donot-just-model</span><br><span style="color:#a01d1d">🚩 LCP=15s, pageLoadTime=23s — медленный first-paint, юзер ждал 23 сек, потом просидел 2m50s, 0 кликов</span><br><a href="https://clarity.microsoft.com/player/jj4yt67ln5/60yq2k/op1iud" target="_blank" style="font-size:12px">▶ Watch replay</a></li><li><b>1hdzckc/vkv7xz</b> <span class="badge" style="color:#555;background:#eee">Stylized_Character_4</span> <span class="badge" style="color:#555;background:#eef">stylized_characters_10kreviews</span><br><span style="color:#a01d1d">🚩 3 immediate reloads того же URL с разными li_ed токенами за 4m31s, 0 кликов — quickback-возвраты из feed</span><br><a href="https://clarity.microsoft.com/player/jj4yt67ln5/1hdzckc/vkv7xz" target="_blank" style="font-size:12px">▶ Watch replay</a></li></ul>
+<div class="action">
+<b>Что значит:</b> 2 из 14 сессий ждали 15-38 секунд первого paint'а. На медленных мобильных
+сетях это означает мгновенный отскок ещё ДО того как мы попадаем в Clarity-семпл.
+Реальный «потерянный» трафик из-за perf может быть в разы больше.<br>
+<b>Фикс:</b> прогнать lighthouse на <code>/outsourcing/ads-3d-characters/</code>, оптимизировать
+LCP-картинку (главный hero), включить lazy-loading для портфолио-карусели.
+</div>
+</div>
+
+<div class="section amber">
+<h2>⚠ High-dwell без действия — паттерн «смотрят, но не конвертят»</h2>
+<ul class="dwell"><li><b>btucf/1kobe7w</b> <span class="badge">Stylized_Props_1</span> <span class="badge" style="color:#555;background:#eef">stylized_props_premium-isometric</span> <b>12m31s</b> dwell — 12m31s на /hard-surface/, 0 кликов — либо AFK либо глубокое чтение без CTA</li><li><b>54q41c/1rg05rj</b> <span class="badge">Stylized_Character-Animation_3</span> <span class="badge" style="color:#555;background:#eef">stylized_chars-anim_003_we-donot-just-model</span> <b>8m55s</b> dwell — 8m55s на /ads-3d-characters/, 0 кликов — пассив без conversion-pull</li></ul>
+<div class="action">
+<b>Что значит:</b> Долгий dwell (5-12 мин) с 0 кликами = либо AFK/tab-left-open, либо deep-reading без CTA-pull.
+В B2B аутсорсинге первый вариант чаще для холодного трафика. Чтобы отделить — нужен Clarity scroll-depth + heatmap (не подключён сейчас).<br>
+<b>Действие:</b> запросить у webmaster включить scroll-depth GTM event + добавить inline-CTA mid-page,
+чтобы прерывать «пассивное чтение» предложением Hire/Quote.
+</div>
+
+<h2 style="margin-top:24px">↗ B2C drift — трафик уходит из B2B funnel</h2>
+<ul class="b2c"><li><b>jb9l4b/owleqq</b> <span class="badge">Stylized_Character_4</span> <span class="badge" style="color:#555;background:#eef">stylized_characters_10kreviews</span><br><span style="color:#8b4309">⚠ Ушёл из B2B funnel в /games/ → Wishlist on Steam — B2B-таргетинг сработал, но landing не удержал бизнес-фокус</span></li></ul>
+<div class="action">
+<b>Что значит:</b> Юзер пришёл по StylizedC ad (B2B intent), но landing-page имел линки "Our Games" + "VIEW GAME" → ушёл смотреть RSG-портфолио игр и в итоге сделал Wishlist в Steam (B2C action).
+<b>Не плохо, но не цель кампании.</b><br>
+<b>Действие:</b> на stylized-лендингах убрать или depriorit'ить "Our Games" nav-link для paid-traffic варианта страницы (или вытащить /games/ ниже fold).
+</div>
+</div>
+
+<div class="section">
+<h2>📊 GA4 layer: top landing pages за окно</h2>
+<table>
+<thead><tr><th>Path</th><th style="text-align:right">Sessions</th>
+<th style="text-align:right">Engaged (eng%)</th><th style="text-align:right">Conv</th></tr></thead>
+<tbody><tr><td><code>/outsourcing/ads-3d-characters/</code></td><td style="text-align:right">245</td><td style="text-align:right">72 (29%)</td><td style="text-align:right">3</td></tr><tr><td><code>/outsourcing/hard-surface-3d-modeling-ads/</code></td><td style="text-align:right">94</td><td style="text-align:right">17 (18%)</td><td style="text-align:right">2</td></tr><tr><td><code>(not set)</code></td><td style="text-align:right">2</td><td style="text-align:right">0 (0%)</td><td style="text-align:right">0</td></tr><tr><td><code>/games/last-pirates-die-together/</code></td><td style="text-align:right">1</td><td style="text-align:right">0 (0%)</td><td style="text-align:right">0</td></tr><tr><td><code>/outsourcing/b2b-game-art/</code></td><td style="text-align:right">1</td><td style="text-align:right">1 (100%)</td><td style="text-align:right">0</td></tr><tr><td><code>/outsourcing/trailers-for-ads/</code></td><td style="text-align:right">1</td><td style="text-align:right">1 (100%)</td><td style="text-align:right">0</td></tr></tbody></table>
+<div class="sub" style="margin-top:8px">Фильтр: sessionSource=linkedin AND sessionMedium CONTAINS 'Styliz'.
+2 главных landing: <code>/outsourcing/ads-3d-characters/</code> (255 sess, 29% eng, 3 conv) и
+<code>/outsourcing/hard-surface-3d-modeling-ads/</code> (94 sess, 18% eng, 2 conv).
+</div>
+</div>
+
+<div class="section">
+<h2>🎯 Per-creative deep-dive (44 креативов, отсортировано по spend ↓)</h2>
+<div class="sub">Verdict: <span style="color:#166534;background:#d4edda;padding:2px 8px;border-radius:4px;font-size:11px">WINNER: 5</span> · <span style="color:#8b4309;background:#ffe2c2;padding:2px 8px;border-radius:4px;font-size:11px">REVIEW: 1</span> · <span style="color:#a01d1d;background:#fde2e1;padding:2px 8px;border-radius:4px;font-size:11px">LOSER: 4</span> · <span style="color:#555;background:#e7eaef;padding:2px 8px;border-radius:4px;font-size:11px">OK: 5</span> · <span style="color:#666;background:#f0f0f3;padding:2px 8px;border-radius:4px;font-size:11px">LOW DATA: 29</span></div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7456009539667156993/" target="_blank"><img src="creatives/Stylized_Props_2__stylized_props_freelancers-vehicle.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_props_freelancers-vehicle</h3>
+      <span class="badge" style="color:#166534;background:#d4edda">WINNER</span>
+    </div>
+    <div class="card-meta">Stylized_Props_2</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$310.50</b></div>
+      <div><span class="lbl">Impr</span> <b>4,185</b></div>
+      <div><span class="lbl">Clicks</span> <b>31</b></div>
+      <div><span class="lbl">CTR</span> <b>0.74%</b></div>
+      <div><span class="lbl">CPC</span> <b>$10.02</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>45</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>10 (22%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>1</b></div>
+    </div>
+    <div class="hypothesis">💡 Реальная конверсия: LI=0 / GA4=1. Креатив доводит до целевого действия.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7456011922732146688/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_freelancers-founder.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_freelancers-founder</h3>
+      <span class="badge" style="color:#166534;background:#d4edda">WINNER</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$264.74</b></div>
+      <div><span class="lbl">Impr</span> <b>4,590</b></div>
+      <div><span class="lbl">Clicks</span> <b>38</b></div>
+      <div><span class="lbl">CTR</span> <b>0.83%</b></div>
+      <div><span class="lbl">CPC</span> <b>$6.97</b></div>
+      <div><span class="lbl">Conv LI</span> <b>2</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>66</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>20 (30%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>1</b></div>
+    </div>
+    <div class="hypothesis">💡 Реальная конверсия: LI=2 / GA4=1. Креатив доводит до целевого действия.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7456011915874418688/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_10kreviews.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_10kreviews</h3>
+      <span class="badge" style="color:#166534;background:#d4edda">WINNER</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$100.90</b></div>
+      <div><span class="lbl">Impr</span> <b>2,906</b></div>
+      <div><span class="lbl">Clicks</span> <b>20</b></div>
+      <div><span class="lbl">CTR</span> <b>0.69%</b></div>
+      <div><span class="lbl">CPC</span> <b>$5.05</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>48</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>10 (21%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>1</b></div>
+    </div>
+    <div class="hypothesis">💡 Реальная конверсия: LI=0 / GA4=1. Креатив доводит до целевого действия.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7456009561406234624/" target="_blank"><img src="creatives/Stylized_Props_2__stylized_props_caretaker-robot.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_props_caretaker-robot</h3>
+      <span class="badge" style="color:#8b4309;background:#ffe2c2">REVIEW</span>
+    </div>
+    <div class="card-meta">Stylized_Props_2</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$70.66</b></div>
+      <div><span class="lbl">Impr</span> <b>1,674</b></div>
+      <div><span class="lbl">Clicks</span> <b>6</b></div>
+      <div><span class="lbl">CTR</span> <b>0.36%</b></div>
+      <div><span class="lbl">CPC</span> <b>$11.78</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>15</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>6 (40%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 GA4 engagement OK (40%) но 0 конверсий — пользователи смотрят, но не оставляют контакт. Проверить CTA-форму, или это soft-interest аудитория.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7456009532742377473/" target="_blank"><img src="creatives/Stylized_Props_2__stylized_props_premium-isometric.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_props_premium-isometric</h3>
+      <span class="badge" style="color:#a01d1d;background:#fde2e1">LOSER</span>
+    </div>
+    <div class="card-meta">Stylized_Props_2</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$64.32</b></div>
+      <div><span class="lbl">Impr</span> <b>882</b></div>
+      <div><span class="lbl">Clicks</span> <b>4</b></div>
+      <div><span class="lbl">CTR</span> <b>0.45%</b></div>
+      <div><span class="lbl">CPC</span> <b>$16.08</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>9</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>0 (0%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 GA4: 9 сессий, engaged всего 0 (0%). Креатив гонит трафик, который мгновенно отскакивает (bounce без engagement).</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7459968046086897664/" target="_blank"><img src="creatives/Stylized_Character-Animation_3__stylized_chars-anim_001_want-to-create-top.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_chars-anim_001_want-to-create-top</h3>
+      <span class="badge" style="color:#555;background:#e7eaef">OK</span>
+    </div>
+    <div class="card-meta">Stylized_Character-Animation_3</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$64.17</b></div>
+      <div><span class="lbl">Impr</span> <b>1,522</b></div>
+      <div><span class="lbl">Clicks</span> <b>8</b></div>
+      <div><span class="lbl">CTR</span> <b>0.53%</b></div>
+      <div><span class="lbl">CPC</span> <b>$8.02</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>3</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>1 (33%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 В пределах нормы: CTR 0.53%, GA4 eng 33% при 3 сес.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7456011903279095808/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_topchart-action.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_topchart-action</h3>
+      <span class="badge" style="color:#555;background:#e7eaef">OK</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$62.71</b></div>
+      <div><span class="lbl">Impr</span> <b>1,888</b></div>
+      <div><span class="lbl">Clicks</span> <b>17</b></div>
+      <div><span class="lbl">CTR</span> <b>0.90%</b></div>
+      <div><span class="lbl">CPC</span> <b>$3.69</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>31</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>8 (26%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 В пределах нормы: CTR 0.90%, GA4 eng 26% при 31 сес.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7456011929095106560/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_2x-engagement.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_2x-engagement</h3>
+      <span class="badge" style="color:#555;background:#e7eaef">OK</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$44.72</b></div>
+      <div><span class="lbl">Impr</span> <b>1,048</b></div>
+      <div><span class="lbl">Clicks</span> <b>12</b></div>
+      <div><span class="lbl">CTR</span> <b>1.15%</b></div>
+      <div><span class="lbl">CPC</span> <b>$3.73</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>35</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>9 (26%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 В пределах нормы: CTR 1.15%, GA4 eng 26% при 35 сес.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7459968342271868928/" target="_blank"><img src="creatives/Stylized_Character-Animation_3__stylized_chars-anim_002_wonder-who-made.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_chars-anim_002_wonder-who-made</h3>
+      <span class="badge" style="color:#555;background:#e7eaef">OK</span>
+    </div>
+    <div class="card-meta">Stylized_Character-Animation_3</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$34.82</b></div>
+      <div><span class="lbl">Impr</span> <b>1,316</b></div>
+      <div><span class="lbl">Clicks</span> <b>4</b></div>
+      <div><span class="lbl">CTR</span> <b>0.30%</b></div>
+      <div><span class="lbl">CPC</span> <b>$8.71</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>2</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>1 (50%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 В пределах нормы: CTR 0.30%, GA4 eng 50% при 2 сес.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474986773757952/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_topchart-rpg.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_topchart-rpg</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$27.57</b></div>
+      <div><span class="lbl">Impr</span> <b>129</b></div>
+      <div><span class="lbl">Clicks</span> <b>4</b></div>
+      <div><span class="lbl">CTR</span> <b>3.10%</b></div>
+      <div><span class="lbl">CPC</span> <b>$6.89</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>3</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>3 (100%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 impressions=129 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7456011909759209472/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_75revenue-angel.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_75revenue-angel</h3>
+      <span class="badge" style="color:#555;background:#e7eaef">OK</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$25.52</b></div>
+      <div><span class="lbl">Impr</span> <b>897</b></div>
+      <div><span class="lbl">Clicks</span> <b>14</b></div>
+      <div><span class="lbl">CTR</span> <b>1.56%</b></div>
+      <div><span class="lbl">CPC</span> <b>$1.82</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>44</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>13 (30%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 В пределах нормы: CTR 1.56%, GA4 eng 30% при 44 сес.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474843328557057/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_blueprince-action.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_blueprince-action</h3>
+      <span class="badge" style="color:#166534;background:#d4edda">WINNER</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$17.44</b></div>
+      <div><span class="lbl">Impr</span> <b>386</b></div>
+      <div><span class="lbl">Clicks</span> <b>1</b></div>
+      <div><span class="lbl">CTR</span> <b>0.26%</b></div>
+      <div><span class="lbl">CPC</span> <b>$17.44</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>2</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>1 (50%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>1</b></div>
+    </div>
+    <div class="hypothesis">💡 Реальная конверсия: LI=0 / GA4=1. Креатив доводит до целевого действия.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475016725188608/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_topchart-strategy.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_topchart-strategy</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$15.21</b></div>
+      <div><span class="lbl">Impr</span> <b>225</b></div>
+      <div><span class="lbl">Clicks</span> <b>1</b></div>
+      <div><span class="lbl">CTR</span> <b>0.44%</b></div>
+      <div><span class="lbl">CPC</span> <b>$15.21</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>1</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>0 (0%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 impressions=225 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475247638306816/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_why-choose.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_why-choose</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$14.90</b></div>
+      <div><span class="lbl">Impr</span> <b>197</b></div>
+      <div><span class="lbl">Clicks</span> <b>2</b></div>
+      <div><span class="lbl">CTR</span> <b>1.02%</b></div>
+      <div><span class="lbl">CPC</span> <b>$7.45</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=197 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7459968576653819904/" target="_blank"><img src="creatives/Stylized_Character-Animation_3__stylized_chars-anim_003_we-donot-just-model.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_chars-anim_003_we-donot-just-model</h3>
+      <span class="badge" style="color:#a01d1d;background:#fde2e1">LOSER</span>
+    </div>
+    <div class="card-meta">Stylized_Character-Animation_3</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$14.69</b></div>
+      <div><span class="lbl">Impr</span> <b>1,503</b></div>
+      <div><span class="lbl">Clicks</span> <b>3</b></div>
+      <div><span class="lbl">CTR</span> <b>0.20%</b></div>
+      <div><span class="lbl">CPC</span> <b>$4.90</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>2</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>1 (50%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 CTR 0.20% &lt;&lt; account avg 0.59%, 0 конверсий — не цепляет аудиторию, бюджет горит на показах без реакции.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474819857219584/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_obsessed-aaa.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_obsessed-aaa</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$12.17</b></div>
+      <div><span class="lbl">Impr</span> <b>267</b></div>
+      <div><span class="lbl">Clicks</span> <b>3</b></div>
+      <div><span class="lbl">CTR</span> <b>1.12%</b></div>
+      <div><span class="lbl">CPC</span> <b>$4.06</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>2</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>1 (50%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 impressions=267 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7459619223452061696/" target="_blank"><img src="creatives/Stylized_Props_2__stylized_props_premium-grid.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_props_premium-grid</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Props_2</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$11.23</b></div>
+      <div><span class="lbl">Impr</span> <b>232</b></div>
+      <div><span class="lbl">Clicks</span> <b>1</b></div>
+      <div><span class="lbl">CTR</span> <b>0.43%</b></div>
+      <div><span class="lbl">CPC</span> <b>$11.23</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>1</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>0 (0%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 impressions=232 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475403523985409/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_launching.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_launching</h3>
+      <span class="badge" style="color:#a01d1d;background:#fde2e1">LOSER</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$11.10</b></div>
+      <div><span class="lbl">Impr</span> <b>1,198</b></div>
+      <div><span class="lbl">Clicks</span> <b>3</b></div>
+      <div><span class="lbl">CTR</span> <b>0.25%</b></div>
+      <div><span class="lbl">CPC</span> <b>$3.70</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 CTR 0.25% &lt;&lt; account avg 0.59%, 0 конверсий — не цепляет аудиторию, бюджет горит на показах без реакции.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7456009546357125120/" target="_blank"><img src="creatives/Stylized_Props_2__stylized_props_caretaker-props.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_props_caretaker-props</h3>
+      <span class="badge" style="color:#166534;background:#d4edda">WINNER</span>
+    </div>
+    <div class="card-meta">Stylized_Props_2</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$9.54</b></div>
+      <div><span class="lbl">Impr</span> <b>1,335</b></div>
+      <div><span class="lbl">Clicks</span> <b>1</b></div>
+      <div><span class="lbl">CTR</span> <b>0.07%</b></div>
+      <div><span class="lbl">CPC</span> <b>$9.54</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>11</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>1 (9%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>1</b></div>
+    </div>
+    <div class="hypothesis">💡 Реальная конверсия: LI=0 / GA4=1. Креатив доводит до целевого действия.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474793072357376/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_investors.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_investors</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$3.39</b></div>
+      <div><span class="lbl">Impr</span> <b>149</b></div>
+      <div><span class="lbl">Clicks</span> <b>1</b></div>
+      <div><span class="lbl">CTR</span> <b>0.67%</b></div>
+      <div><span class="lbl">CPC</span> <b>$3.39</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>1</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>0 (0%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 impressions=149 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7456009553491615744/" target="_blank"><img src="creatives/Stylized_Props_2__stylized_props_redmech-closeup.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_props_redmech-closeup</h3>
+      <span class="badge" style="color:#a01d1d;background:#fde2e1">LOSER</span>
+    </div>
+    <div class="card-meta">Stylized_Props_2</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$2.57</b></div>
+      <div><span class="lbl">Impr</span> <b>933</b></div>
+      <div><span class="lbl">Clicks</span> <b>1</b></div>
+      <div><span class="lbl">CTR</span> <b>0.11%</b></div>
+      <div><span class="lbl">CPC</span> <b>$2.57</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>13</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>0 (0%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 GA4: 13 сессий, engaged всего 0 (0%). Креатив гонит трафик, который мгновенно отскакивает (bounce без engagement).</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475374331559936/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_aaa-comeback.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_aaa-comeback</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>60</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=60 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475219129835520/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_freelancers-warrior.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_freelancers-warrior</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>96</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=96 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474872634187776/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_blueprince-stylish.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_blueprince-stylish</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>42</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=42 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475276402962432/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_blueprince-10m.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_blueprince-10m</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>322</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=322 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7459619251717505025/" target="_blank"><img src="creatives/Stylized_Props_2__stylized_props_outsource-mech.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_props_outsource-mech</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Props_2</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>347</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=347 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475338147287040/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_whytrustus.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_whytrustus</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>72</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=72 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475160506073089/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_funding-creatures.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_funding-creatures</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>76</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=76 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474955949842432/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_warrior.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_warrior</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>64</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=64 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7459619166862536704/" target="_blank"><img src="creatives/Stylized_Props_2__stylized_props_upgrade-arcade.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_props_upgrade-arcade</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Props_2</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>231</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=231 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475046471098368/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_topchart-scifi.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_topchart-scifi</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>26</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>2</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>1 (50%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 impressions=26 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7459619055608610816/" target="_blank"><img src="creatives/Stylized_Props_2__stylized_props_team-overloaded.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_props_team-overloaded</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Props_2</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>102</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=102 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458463322145828865/" target="_blank"><img src="creatives/Stylized_Character_1__templateforclaude.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>templateforclaude</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>0</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=0 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474765289259008/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_2mlnplayers.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_2mlnplayers</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>51</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=51 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475307348480000/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_users-revenue.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_users-revenue</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>134</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=134 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458481691238727680/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_producers-approve.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_producers-approve</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>33</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=33 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474927730565120/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_mage.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_mage</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>108</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=108 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7459619137493925889/" target="_blank"><img src="creatives/Stylized_Props_2__stylized_props_premium-motorcycle.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_props_premium-motorcycle</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Props_2</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>131</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=131 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458474900400267264/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_robot.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_robot</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>66</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=66 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475431936241664/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_aaa-giraffe.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_aaa-giraffe</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>63</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=63 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458481615044898816/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_funding-heads.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_funding-heads</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>21</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=21 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458475188846903296/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_2x-sessions.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_2x-sessions</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>87</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>2</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>2 (100%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 impressions=87 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7458481585307242497/" target="_blank"><img src="creatives/Stylized_Character_1__stylized_characters_faces-remember.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_characters_faces-remember</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Character_1</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>40</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4 sess</span> <b>1</b></div>
+      <div><span class="lbl">GA4 eng</span> <b>1 (100%)</b></div>
+      <div><span class="lbl">GA4 conv</span> <b>0</b></div>
+    </div>
+    <div class="hypothesis">💡 impressions=40 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-thumb"><a href="https://www.linkedin.com/feed/update/urn:li:share:7459619196654706691/" target="_blank"><img src="creatives/Stylized_Props_2__stylized_props_break-pipeline.jpg" style="width:110px;height:110px;object-fit:cover;border-radius:6px;border:1px solid #e2e2e6;background:#f0f0f3"></a></div>
+  <div class="card-body">
+    <div class="card-head">
+      <h3>stylized_props_break-pipeline</h3>
+      <span class="badge" style="color:#666;background:#f0f0f3">LOW DATA</span>
+    </div>
+    <div class="card-meta">Stylized_Props_2</div>
+    <div class="card-grid">
+      <div><span class="lbl">Spend</span> <b>$0.00</b></div>
+      <div><span class="lbl">Impr</span> <b>264</b></div>
+      <div><span class="lbl">Clicks</span> <b>0</b></div>
+      <div><span class="lbl">CTR</span> <b>0.00%</b></div>
+      <div><span class="lbl">CPC</span> <b>$0.00</b></div>
+      <div><span class="lbl">Conv LI</span> <b>0</b></div>
+      <div><span class="lbl">GA4</span> <span style="color:#999">нет данных (UTM-mismatch?)</span></div>
+    </div>
+    <div class="hypothesis">💡 impressions=264 &lt; 500 — недостаточно для вердикта.</div>
+  </div>
+</div>
+
+</div>
+
+<div class="section green">
+<h2>✅ Action plan для Сергея (по приоритету)</h2>
+<div class="action"><b>1. UTM fix</b> (1 час, blocker для всей attribution) —
+в LinkedIn Campaign Manager → 3 активных кампании → URL parameters → выставить
+<code>utm_source=linkedin&amp;utm_medium=paid_social&amp;utm_campaign={{campaign.name}}</code>.
+До этого фикса любой PAUSE/SCALE-решение базируется на криво атрибутированном GA4.</div>
+<div class="action"><b>2. Page-perf аудит</b> /outsourcing/ads-3d-characters/ (LCP 15s, pageLoad 38s наблюдены).
+Lighthouse + лёгкий hero-image — устранить 2-3 секунды LCP уберёт ~30% bounce.</div>
+<div class="action"><b>3. Inline-CTA для stylized-лендингов</b> — добавить block с "Get a Quote" mid-page
+(сейчас CTA только в footer). Smart-event drought (0 conversion-events в 14 сессиях) подтверждает что юзер не доскролливает до CTA.</div>
+<div class="action"><b>4. PAUSE candidates</b> на основе verdict'а — см. карточки выше с тегом
+<span class="badge" style="color:#a01d1d;background:#fde2e1">LOSER</span>. Реальная экономия = эти креативы
+жгут бюджет без attribution и без engagement.</div>
+<div class="action"><b>5. Scale winner</b> — <code>stylized_characters_freelancers-founder</code> единственный с 2 LI-conversions
+и нормальным GA4 engagement. Дублировать в Stylized_Character-Animation_3, тестировать варианты CTA.</div>
+</div>
+
 </body></html>
